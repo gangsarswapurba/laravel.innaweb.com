@@ -1,12 +1,66 @@
-<?php
-header("refresh: 5; https://laravel.innaweb.com/public/");
 
-	echo '<title>Laravel Installed</title><div style="background: #e9ffed; border: 1px solid #b0dab7; padding: 15px;" align="center" >
-	<font size="5" color="#182e7a">Laravel is installed successfully.</font><br /><br />
-	<font size="4">Laravel is a Framework and doesn\'t have an index page.<br /><br />
-	You will be redirected to its "public" folder in 5 seconds...<br /><br />
-	Laravel is a clean and classy framework for PHP web development.
 
-Freeing you from spaghetti code, Laravel helps you create wonderful applications using simple, expressive syntax. Development should be a creative experience that you enjoy, not something that is painful. Enjoy the fresh air.
-</font></div>';
-?>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Service Unavailable</title>
+
+        <!-- Fonts -->
+        <link rel="dns-prefetch" href="//fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css?family=Inter" rel="stylesheet">
+
+        <!-- Styles -->
+        <style>
+            html, body {
+                background-color: #f1f1f1;
+                color: #636b6f;
+                font-family: 'Inter', sans-serif;
+                font-weight: 100;
+                height: 100vh;
+                margin: 0;
+            }
+
+			body {
+				background-image: radial-gradient(ellipse closest-side at center,#fff 0,#dedede 100%);
+			}
+
+            .full-height {
+                height: 100vh;
+            }
+
+            .flex-center {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+            }
+
+            .position-ref {
+                position: relative;
+            }
+
+            .code {
+                border-right: 2px solid;
+                font-size: 26px;
+                padding: 0 15px 0 15px;
+                text-align: center;
+            }
+
+            .message {
+                font-size: 18px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="flex-center position-ref full-height">
+            <div class="code">
+                503            </div>
+
+            <div class="message" style="padding: 10px;">
+                Service Unavailable            </div>
+        </div>
+    </body>
+</html>
