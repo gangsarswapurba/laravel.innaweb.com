@@ -7,6 +7,7 @@
         <title>Algostudio - Test Laravel</title>
 
         <!-- Fonts -->
+        <link rel="dns-prefetch" href="//fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css?family=Inter:200,800" rel="stylesheet">
 
         <!-- favicon -->
