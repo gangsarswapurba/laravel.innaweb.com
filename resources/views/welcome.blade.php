@@ -105,7 +105,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    <a href="{{ config('APP_URL') }}"><img src="img/algostudio.svg" alt="logo algostudio" /></a>
+                    <a href="{{ config('APP_URL') }}"><img src="img/algostudio3.svg" alt="logo algostudio" /></a>
                 </div>
 
                 <div class="links">
