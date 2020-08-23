@@ -9,11 +9,13 @@ use Illuminate\Routing\Controller as BaseController;
 
 use Illuminate\Support\Facades\DB;
 
-class KadalController extends BaseController
+class ProductController extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
     function render() {
-        return DB::table('order')->get();
+        $products = DB::table('product')->get();
+
+        return view('product', ['products' => $products]);
     }
 }
