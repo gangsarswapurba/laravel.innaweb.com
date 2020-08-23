@@ -1,0 +1,71 @@
+body {
+  background-color: darkgray;
+}
+
+.nav-item button {
+  font-weight: bold;
+}
+
+.h1, h1 {
+  font-weight: 600;
+}
+
+body {
+  &#dashboard {
+    .dataTables_length, .dataTables_filter, .dataTables_paginate {
+      display: none;
+    }
+  }
+
+  &#order-view {
+    .dataTables_length, .dataTables_filter, .dataTables_paginate {
+      display: none;
+    }
+  }
+}
+
+.container-person {
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid darkgray;
+  padding: 5px 5px;
+  margin-top: 5px;
+  margin-bottom: 4rem;
+}
+
+.bg-dark {
+  background-color: black !important;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: white;
+  font-weight: bold;
+
+  &:focus, &:hover {
+    color: white;
+    font-weight: bold;
+  }
+}
+
+.fa.fa-trash {
+  color: red;
+}
+
+footer {
+  background-color: black;
+  color: white;
+
+  a {
+    background-color: black;
+    color: white;
+
+    &:hover {
+      background-color: black;
+      color: white;
+    }
+  }
+
+  span {
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
