@@ -24,15 +24,11 @@
     <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.21/sp-1.1.1/sl-1.3.1/datatables.min.js"></script>
     <!-- summernote -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-bs4.min.js"></script>
+    <!-- chartjs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha512-s+xg36jbIujB2S2VKfpGmlC3T5V2TF3lY48DX7u2r9XzGzgPsa6wTpOQA7J9iffvdeBN0q9tKzRxVxw1JviZPg==" crossorigin="anonymous"></script>
 
 
     <script src="{{ asset('js/app.js') }}" defer></script>
-
-    <script>
-    $(document).ready( function () {
-        $('#product_table').DataTable();
-    } );
-    </script>
 
     </body>
 </html>

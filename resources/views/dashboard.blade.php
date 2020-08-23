@@ -1,5 +1,8 @@
 @include('components/header')
 
+<h2>Penjualan Bulan {{ date('F') }} Ini</h2>
+    <canvas id="myChart" width="" height=""></canvas>
+
 <h2 class="mt-5 mb-4">10 Penjualan Terakhir</h2>
     <table id="product_table" class="table table-striped table-bordered table-responsive-sm" style="width:100%">
         <thead>
