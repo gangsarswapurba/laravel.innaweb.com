@@ -3,8 +3,7 @@
     <footer class="page-footer font-small">
         <div class="footer-copyright text-center py-3">
             <p class="font-weight-light mb-0">
-                <span>&copy; {{ date('Y') }} Copyright:</span>
-                <a href="https://algostudio.net/"> algostudio</a>
+                <span>feel free to fork this project at my </span> <a href="https://github.com/gangsarswapurba/laravel.innaweb.com/actions"><i class="fab fa-github"></i> GitHub</a>
             </p>
         </div>
     </footer>
