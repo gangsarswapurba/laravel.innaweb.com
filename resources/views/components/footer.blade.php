@@ -3,7 +3,7 @@
     <footer class="page-footer font-small">
         <div class="footer-copyright text-center py-3">
             <p class="font-weight-light mb-0">
-                <span>feel free to fork this project at my </span> <a href="https://github.com/gangsarswapurba/laravel.innaweb.com/actions"><i class="fab fa-github"></i> GitHub</a>
+                <span>feel free to fork this project at my </span> <a href="https://github.com/gangsarswapurba/laravel.innaweb.com"><i class="fab fa-github"></i> GitHub</a>
             </p>
         </div>
     </footer>
