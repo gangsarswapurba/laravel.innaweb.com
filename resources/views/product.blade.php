@@ -5,7 +5,7 @@
         <h1>Daftar Produk</h1>
       </div>
       <div class="col-md-6 text-right">
-        <a class="btn btn-primary" href="<?= url('/product/form/') ?>"><i class="fas fa-plus-circle"></i> Tambah Produk</a>
+        <a class="btn btn-primary" href="#"><i class="fas fa-plus-circle"></i> Tambah Produk</a>
       </div>
     </div><!-- .row -->
     <table id="product_table" class="table table-striped table-bordered table-responsive-sm" style="width:100%">
@@ -28,7 +28,7 @@
                     <td><?= $product->nome ?></td>
                     <td><?= $product->sku ?></td>
                     <td><?= $product->preco ?></td>
-                    <td><a href="<?= url('product/form/'.$product->id) ?>"><i class="fa fa-edit" aria-hidden="true"></i>
+                    <td><a href="#"><i class="fa fa-edit" aria-hidden="true"></i>
 </a></td>
                     <td><a class="delete-product" href="#" data-id="<?= url('product/delete/'.$product->id) ?>" data-toggle="modal" data-target="#deleteProductModal"><i class="fa fa-trash" aria-hidden="true"></i>
 </a></td>

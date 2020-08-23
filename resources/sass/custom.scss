@@ -14,20 +14,6 @@ body {
   font-weight: 600;
 }
 
-body {
-  &#dashboard {
-    .dataTables_length, .dataTables_filter, .dataTables_paginate {
-      display: none;
-    }
-  }
-
-  &#order-view {
-    .dataTables_length, .dataTables_filter, .dataTables_paginate {
-      display: none;
-    }
-  }
-}
-
 .container-person {
   background-color: white;
   border-radius: 10px;
@@ -48,6 +34,12 @@ body {
   &:focus, &:hover {
     color: white;
     font-weight: bold;
+  }
+}
+
+body#DashboardController #product_table_wrapper > .row {
+  &:first-child, &:last-child {
+    display: none;
   }
 }
 
