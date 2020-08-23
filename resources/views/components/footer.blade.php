@@ -1,4 +1,4 @@
-<footer class="page-footer font-small">
+    <footer class="page-footer font-small">
         <div class="footer-copyright text-center py-3">
             <p class="font-weight-light mb-0">
                 <span>&copy; {{ date('Y') }} Copyright:</span>
