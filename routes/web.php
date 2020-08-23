@@ -13,14 +13,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
-    return view('dashboard');
+    return view('dashboard', [
+        'nama_route' => 'Dashboard',
+    ]);
 });
 
-Route::get('/product', function() {
-    return view('product');
+Route::get('product/{nama_user?}', function ( $nama_user = null ) {
+    return view('product', [
+        'nama_route' => 'Produk',
+        'nama_user' => $nama_user
+    ]);
 });
 
-Route::get('/order', function() {
-    return view('order');
-});
+Route::view('/order', 'order', [
+    'nama_route' => 'Penjualan'
+]);
+
+Route::get('/kadal', 'KadalController@render');
