@@ -28,7 +28,7 @@
     </header>
 
     <main class="container container-person mt-5 p-5 shadow">
-        {{ config('database.default') }}
+        this is order page
     </main>
 
     <footer class="page-footer font-small">
