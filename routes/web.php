@@ -16,8 +16,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'DashboardController@index');
 
 Route::get('/product', 'ProductController@index');
+Route::get('/product/ubah/{id}', 'ProductController@ubah');
+Route::get('/product/create', 'ProductController@create');
 
 Route::get('/order', 'OrderController@index');
 Route::get('/order/view/{id}', 'OrderController@view');
-
-Route::get('/phpinfo', 'PhpinfoController@index');
+Route::get('/order/create', 'OrderController@create');
+Route::get('/order/save', 'OrderController@save');

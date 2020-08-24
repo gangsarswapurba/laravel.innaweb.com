@@ -16,7 +16,24 @@ class ProductController extends BaseController
     function index() {
         $products = DB::table('product')->get();
 
-        return view('product', ['products' => $products]);
+        return view('product/index', [
+            'products' => $products
+        ]);
+    }
+
+    function ubah($id) {
+        $product = DB::table('product')
+        ->where('id', '=', $id)
+        ->get();
+
+        return view('product/edit', [
+            'product' => $product   
+        ]);
+    }
+
+    function create() {
+        
+        return view('product/edit');
     }
 
 }

@@ -5,7 +5,7 @@
         <h1>Daftar Penjualan</h1>
       </div>
       <div class="col-md-6 text-right">
-        <a class="btn btn-primary" href="#"><i class="fas fa-plus-circle"></i> Tambah Transaksi Penjualan</a>
+        <a class="btn btn-primary" href="{{ url('order/create') }}"><i class="fas fa-plus-circle"></i> Tambah Transaksi Penjualan</a>
       </div>
     </div><!-- .row -->
     <table id="product_table" class="table table-striped table-bordered table-responsive-sm" style="width:100%">
@@ -24,7 +24,7 @@
                 <tr>
                     <td><?= $order->id ?></td>
                     <td><?php $data = new DateTime($order->data); echo $data->format('d/m/Y - H:i:s') ?></td>
-                    <td><a href="#"><i class="fa fa-info-circle" aria-hidden="true"></i></a></td>
+                    <td><a href="{{ url('/order/view/'.$order->id) }}"><i class="fa fa-info-circle" aria-hidden="true"></i></a></td>
                     <td><a class="delete-order" href="#" data-id="<?= url('order/delete/'.$order->id) ?>" data-toggle="modal" data-target="#deleteOrderModal"><i class="fa fa-trash" aria-hidden="true"></i>
 </a></td>
                 </tr>
