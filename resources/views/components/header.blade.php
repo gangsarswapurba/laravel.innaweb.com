@@ -24,7 +24,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 
-<body id="{{ class_basename(Route::current()->controller) }}">
+<body id="{{ Route::currentRouteName() ? Route::currentRouteName() : 'dashboard' }}">
     <header class="main-header">
         @include('/components/menu')
     </header>

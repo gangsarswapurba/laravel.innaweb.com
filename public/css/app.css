@@ -41,8 +41,8 @@ h1 {
   font-weight: bold;
 }
 
-body#DashboardController #product_table_wrapper > .row:first-child,
-body#DashboardController #product_table_wrapper > .row:last-child {
+body#dashboard #product_table_wrapper > .row:first-child,
+body#dashboard #product_table_wrapper > .row:last-child {
   display: none;
 }
 

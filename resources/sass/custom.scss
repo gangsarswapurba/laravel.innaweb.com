@@ -37,7 +37,7 @@ body {
   }
 }
 
-body#DashboardController #product_table_wrapper > .row {
+body#dashboard #product_table_wrapper > .row {
   &:first-child, &:last-child {
     display: none;
   }

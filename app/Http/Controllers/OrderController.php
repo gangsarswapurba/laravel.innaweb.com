@@ -61,4 +61,10 @@ class OrderController extends BaseController
     function save() {
         return 'on development';
     }
+
+    function delete($id) {
+        DB::table('order')->where('id', '=', $id)->delete();
+
+        return view('dashboard/index');
+    }
 }

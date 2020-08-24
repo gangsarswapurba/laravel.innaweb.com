@@ -31,4 +31,5 @@
         </tbody>
     </table>
 
+@include('order/modal/delete')
 @include('components/footer')
