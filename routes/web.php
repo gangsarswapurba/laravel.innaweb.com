@@ -19,6 +19,7 @@ Route::get('/product', 'ProductController@index');
 Route::get('/product/ubah/{id}', 'ProductController@ubah');
 Route::get('/product/create', 'ProductController@create');
 Route::get('/product/save', 'ProductController@save');
+Route::get('/product/delete/{id}', 'ProductController@delete');
 
 Route::get('/order', 'OrderController@index');
 Route::get('/order/view/{id}', 'OrderController@view');

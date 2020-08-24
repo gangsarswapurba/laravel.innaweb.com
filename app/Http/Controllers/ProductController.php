@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use Illuminate\Routing\Route;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Foundation\Bus\DispatchesJobs;
-use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
 
-use Illuminate\Support\Facades\DB;
+use Illuminate\Foundation\Validation\ValidatesRequests;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
 class ProductController extends BaseController
 {
@@ -54,6 +55,12 @@ class ProductController extends BaseController
         // );
 
         return view('product/index');
+    }
+
+    function delete($id) {
+        DB::table('product')->where('id', '=', $id)->delete();
+
+        return back();
     }
 
 }

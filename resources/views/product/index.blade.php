@@ -40,4 +40,5 @@
         </tbody>
     </table>
 
+@include('product/modal/delete')
 @include('components/footer')

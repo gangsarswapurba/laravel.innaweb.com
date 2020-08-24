@@ -65,6 +65,6 @@ class OrderController extends BaseController
     function delete($id) {
         DB::table('order')->where('id', '=', $id)->delete();
 
-        return view('dashboard/index');
+        return back();
     }
 }
