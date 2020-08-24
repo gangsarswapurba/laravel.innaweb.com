@@ -13,8 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'DashboardController@render');
+Route::get('/', 'DashboardController@index');
 
-Route::get('/product', 'ProductController@render');
+Route::get('/product', 'ProductController@index');
 
-Route::get('/order', 'OrderController@render');
+Route::get('/order', 'OrderController@index');
+Route::get('/order/view/{id}', 'OrderController@view');
+
+Route::get('/phpinfo', 'PhpinfoController@index');

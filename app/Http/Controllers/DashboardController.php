@@ -13,7 +13,7 @@ class DashboardController extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-    function render() {
+    function index() {
         $orders = DB::table('order')->get();
 
         return view('dashboard', ['orders' => $orders]);

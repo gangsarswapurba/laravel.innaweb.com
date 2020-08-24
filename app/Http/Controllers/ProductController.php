@@ -13,9 +13,10 @@ class ProductController extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-    function render() {
+    function index() {
         $products = DB::table('product')->get();
 
         return view('product', ['products' => $products]);
     }
+
 }
