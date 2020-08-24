@@ -22,11 +22,13 @@ class OrderController extends BaseController
     function view($id) {
         $products = DB::table('product')
         ->join('product_order', 'product_order.product_id', '=', 'product.id')
-        ->join('order', 'product_order.order_id', '=', 'order.id')
-        ->select('product.nome', 'product.sku', 'product.preco', 'product_order.product_qtd')
-        ->orderBy('product.id')
+        // ->join('order', 'product_order.order_id', '=', 'order.id')
+        // ->select('product.nome', 'product.sku', 'product.preco', 'product_order.product_qtd')
+        // ->orderBy('product.id')
+        ->select('*')
         ->where('product_order.order_id', '=', $id)
-        ->where('order.status', '=', 1)
+        // ->where('order.status', '=', 1)
+        ->distinct()
         ->get();
         
         $order_total = 0;
