@@ -12,7 +12,6 @@
     @if($products) 
     <form id="form_make_order" method="post" enctype="multipart/form-data" action="{{ url($action_form) }}">
         {{ @csrf_field() }}
-        {{ method_field('POST') }}
         @foreach ($products as $product)
             <div class="container">
                 <div class="row">
