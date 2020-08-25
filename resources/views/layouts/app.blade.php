@@ -40,7 +40,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 
-<body id="{{ Route::currentRouteName() ? Route::currentRouteName() : 'dashboard' }}">
+<body>
     <header class="main-header">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
             <a class="navbar-brand" href="{{ url('') }}/"><img src="{{ url('/img/algostudio.svg') }}"></a>

@@ -38,7 +38,7 @@ body {
   }
 }
 
-body#dashboard #product_table_wrapper > .row {
+#dashboard_wrapper > .row {
   &:first-child, &:last-child {
     display: none;
   }
