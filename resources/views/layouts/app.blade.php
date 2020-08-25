@@ -95,6 +95,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha512-s+xg36jbIujB2S2VKfpGmlC3T5V2TF3lY48DX7u2r9XzGzgPsa6wTpOQA7J9iffvdeBN0q9tKzRxVxw1JviZPg==" crossorigin="anonymous"></script>
     <!-- bootstrap-input-spinner -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap-input-spinner@1.13.19/src/bootstrap-input-spinner.min.js"></script>
+    <!-- instant.page -->
+    <script src="https://instant.page/5.1.0" type="module" integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
 
     <script src="{{ asset('js/app.js') }}" defer></script>
 
