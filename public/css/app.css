@@ -42,8 +42,8 @@ h1 {
   font-weight: bold;
 }
 
-body#dashboard #product_table_wrapper > .row:first-child,
-body#dashboard #product_table_wrapper > .row:last-child {
+#dashboard_wrapper > .row:first-child,
+#dashboard_wrapper > .row:last-child {
   display: none;
 }
 
