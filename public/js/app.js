@@ -188,7 +188,7 @@ $(document).ready(function () {
 /***/ (function(module, exports) {
 
 $(document).ready(function () {
-  $("input[type='number']").inputSpinner();
+  $("input[type='number'].stepper").inputSpinner();
 });
 
 /***/ }),
