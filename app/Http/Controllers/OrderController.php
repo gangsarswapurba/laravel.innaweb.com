@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Foundation\Bus\DispatchesJobs;
-use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
 
-use Illuminate\Support\Facades\DB;
+use Illuminate\Foundation\Validation\ValidatesRequests;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
 class OrderController extends BaseController
 {
@@ -58,8 +59,46 @@ class OrderController extends BaseController
         ]);
     }
 
-    function save() {
-        return 'on development';
+    function getProductById($id) {
+        $product = DB::table('product')
+        ->where('id', '=', $id)
+        ->where('status', '=', 1)
+        ->get();
+
+        return $product;
+    }
+
+    function save(Request $request) {
+        
+        $products = $request->input('product');
+        $ordered_products = [];
+
+        foreach ($products as $key => $product_qtd){
+            $order_price = 0;
+            if($product_qtd){
+                $product = $this->getProductById($key);
+                $order_price = ($product[0]->preco * $product_qtd) + $order_price;
+                $ordered_products[] = array
+                (
+                    'product_id' => $key,
+                    'product_qtd' => $product_qtd,
+                );
+            }
+        }
+        
+        $order_id = DB::table('order')->insertGetId(['data' => date("Y-m-d H:i:s")]);
+
+        foreach ($ordered_products as $ordered_product){
+            $referenced_data = array
+            (
+                'order_id' => $order_id,
+                'product_id' => $ordered_product['product_id'],
+                'product_qtd' => $ordered_product['product_qtd'],
+            );
+            DB::table('product_order')->insertGetId($referenced_data);
+        }
+
+        return redirect('order');
     }
 
     function delete($id) {

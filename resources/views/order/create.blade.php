@@ -3,15 +3,15 @@
 @section('main')
     @php $action_form = '/order/save/'; @endphp
     @if(isset($order) && $order)
-        @foreach ($order as $pedido);
-        @php $action_form = $action_form.$pedido->id ?> @endphp
-        @endforeach
-        <h1>Edit Transaksi: {{ $pedido->id }} </h1>
+        @php $order = $order[0] @endphp
+        @php $action_form = $action_form.$order->id ?> @endphp
+        <h1>Edit Transaksi: {{ $order->id }} </h1>
     @else
         <h1>Tambah Transaksi Penjualan</h1>
     @endif
     @if($products) 
-    <form id="form_make_order" method="post" action="">
+    <form id="form_make_order" method="post" action="{{ $action_form }}">
+        {{ @csrf_field() }}
         @foreach ($products as $product)
             <div class="container">
                 <div class="row">
