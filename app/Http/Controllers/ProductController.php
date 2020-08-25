@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 use Illuminate\Routing\Route;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Foundation\Bus\DispatchesJobs;
-use Illuminate\Routing\Controller as BaseController;
 
+use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
@@ -41,20 +42,28 @@ class ProductController extends BaseController
         return view('product.edit');
     }
 
-    function save() {
+    function save(Request $request, $id = null) {
+
+        $id = is_null( $id ) ? null : $id;
+
+        $input = $request->input();
         
         $product = DB::table('product')
         ->updateOrInsert(
+            [ 
+                'id' => $id,
+            ],
             [
-                'nome' => 'jamal@innaweb.com', 
-                'sku' => '007', 
-                'descricao' => 'lorem ipsum',
-                'preco' => '13',
+                'id' => $id,
+                'nome' => $input['nome'], 
+                'sku' => $input['sku'], 
+                'preco' => $input['preco'],
+                'descricao' => $input['descricao'],
                 'status' => 1
             ]
         );
 
-        return back();
+        return is_null( $id ) ? redirect('product') : back();
     }
 
     function delete($id) {

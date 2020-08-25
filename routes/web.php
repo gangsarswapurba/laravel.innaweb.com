@@ -18,11 +18,12 @@ Route::get('/', 'DashboardController@index');
 Route::get('/product', 'ProductController@index');
 Route::get('/product/ubah/{id}', 'ProductController@ubah');
 Route::get('/product/create', 'ProductController@create');
-Route::get('/product/save', 'ProductController@save');
+Route::post('/product/save', 'ProductController@save');
+Route::post('/product/save/{id}', 'ProductController@save');
 Route::get('/product/delete/{id}', 'ProductController@delete');
 
 Route::get('/order', 'OrderController@index');
 Route::get('/order/view/{id}', 'OrderController@view');
 Route::get('/order/create', 'OrderController@create');
-Route::get('/order/save', 'OrderController@save');
+Route::post('/order/save', 'OrderController@save');
 Route::get('/order/delete/{id}', 'OrderController@delete');
