@@ -9,7 +9,7 @@
     @else
         <h1>Tambah Produk Baru</h1>
     @endif
-    <form id="form_product" method="post" enctype="multipart/form-data" action="{{url($action_form)}}">
+    <form id="form_product" method="post" enctype="multipart/form-data" action="{{ url($action_form) }}">
         {{ @csrf_field() }}
         <div class="form-row">
             <div class="col-md-4 mb-3">

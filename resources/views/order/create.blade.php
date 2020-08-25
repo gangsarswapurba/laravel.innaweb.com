@@ -10,7 +10,7 @@
         <h1>Tambah Transaksi Penjualan</h1>
     @endif
     @if($products) 
-    <form id="form_make_order" method="post" enctype="multipart/form-data" action="{{ $action_form }}">
+    <form id="form_make_order" method="post" enctype="multipart/form-data" action="{{ url($action_form) }}">
         {{ @csrf_field() }}
         {{ method_field('POST') }}
         @foreach ($products as $product)
