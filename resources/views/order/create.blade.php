@@ -24,7 +24,7 @@
                     <div class="col-sm-4 col-xs-4"><?= $product->nome ?></div>
                     <div class="col-sm-3 col-xs-3"><?= $product->sku ?></div>
                     <div class="col-sm-3 col-xs-3">Rp<?= $product->preco ?></div>
-                    <div class="col-sm-2 col-xs-2"><input style="max-width: 6rem;" type="number" id="product[{{ $product->id }}]" name="product[{{ $product->id }}]" step="1" min="0" max="100"
+                    <div class="col-sm-2 col-xs-2"><input class="stepper" style="max-width: 6rem;" type="number" id="product[{{ $product->id }}]" name="product[{{ $product->id }}]" step="1" min="0" max="100"
                                                           onkeypress='return event.charCode >= 48 && event.charCode <= 57' value="0"></div>
                 </div>
             </div>
