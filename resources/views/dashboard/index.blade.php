@@ -1,5 +1,6 @@
-@include('components/header')
+@extends('layouts.app')
 
+@section('main')
 <h2>Penjualan Bulan {{ date('F') }} Ini</h2>
     <canvas id="myChart" width="" height=""></canvas>
 
@@ -30,6 +31,8 @@
         <?php } ?>
         </tbody>
     </table>
+@endsection
 
-@include('order/modal/delete')
-@include('components/footer')
+@section('modal')
+    @include('order.modal.delete')
+@endsection

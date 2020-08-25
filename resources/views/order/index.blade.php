@@ -1,5 +1,6 @@
-@include('components/header')
+@extends('layouts.app')
 
+@section('main')
     <div class="row mb-3">
       <div class="col-md-6">
         <h1>Daftar Penjualan</h1>
@@ -34,6 +35,9 @@
         <?php } ?>
         </tbody>
     </table>
+@endsection
 
-@include('order/modal/delete')
-@include('components/footer')
+@section('modal')
+    @include('order/modal/delete')
+@endsection
+

@@ -1,5 +1,6 @@
-@include('components/header')
-    
+@extends('layouts.app')
+
+@section('main')
     @php $action_form = '/product/save/' @endphp
     @if(isset($product) && $product)
         @foreach ($product as $produto)
@@ -36,7 +37,8 @@
             </div>
         </div>
         <button class="btn btn-primary" type="submit">Submit</button>
-        <?= (isset($produto) ? '<a href="#" data-id="'.url('product/delete/'.$produto->id).'" class="btn btn-danger delete-product" data-toggle="modal" data-target="#deleteProductModal">Hapus</a>' : '') ?>
+        <a href="{{ url('product') }}" class="btn btn-secondary">Batal</a>
     </form>
+@endsection
 
-@include('components/footer')
+
