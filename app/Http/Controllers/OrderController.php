@@ -19,7 +19,7 @@ class OrderController extends BaseController
         ->orderBy('id')
         ->get();
 
-        return view('order/index', [
+        return view('order.index', [
             'orders' => $orders
         ]);
     }
@@ -40,7 +40,7 @@ class OrderController extends BaseController
             $order_total = ($product->preco * $product->product_qtd) + $order_total;
         }
 
-        return view('order/view', [
+        return view('order.view', [
             'products' => $products, 
             'order_id' => $id,
             'total' => $order_total
@@ -53,7 +53,7 @@ class OrderController extends BaseController
         ->orderBy('id')
         ->get();
         
-        return view('order/create', [
+        return view('order.create', [
             'products' => $products
         ]);
     }

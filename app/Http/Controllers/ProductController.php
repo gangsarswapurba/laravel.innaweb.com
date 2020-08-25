@@ -17,7 +17,7 @@ class ProductController extends BaseController
     function index() {
         $products = DB::table('product')->get();
 
-        return view('product/index', 
+        return view('product.index', 
             [
                 'products' => $products 
             ]
@@ -29,7 +29,7 @@ class ProductController extends BaseController
         ->where('id', '=', $id)
         ->get();
 
-        return view('product/edit', 
+        return view('product.edit', 
             [
                 'product' => $product 
             ]
@@ -38,27 +38,29 @@ class ProductController extends BaseController
 
     function create() {
         
-        return view('product/edit');
+        return view('product.edit');
     }
 
     function save() {
         
-        // $product = DB::table('product')
-        // ->updateOrInsert(
-        //     [
-        //         'nome' => 'jamal@innaweb.com', 
-        //         'sku' => '007', 
-        //         'descricao' => 'lorem ipsum',
-        //         'preco' => '13',
-        //         'status' => 1
-        //     ]
-        // );
+        $product = DB::table('product')
+        ->updateOrInsert(
+            [
+                'nome' => 'jamal@innaweb.com', 
+                'sku' => '007', 
+                'descricao' => 'lorem ipsum',
+                'preco' => '13',
+                'status' => 1
+            ]
+        );
 
-        return view('product/index');
+        return back();
     }
 
     function delete($id) {
-        DB::table('product')->where('id', '=', $id)->delete();
+        DB::table('product')
+        ->where('id', '=', $id)
+        ->delete();
 
         return back();
     }

@@ -19,6 +19,6 @@ class DashboardController extends BaseController
         ->orderBy('id')
         ->get();
 
-        return view('dashboard', ['orders' => $orders]);
+        return view('dashboard.index', ['orders' => $orders]);
     }
 }
