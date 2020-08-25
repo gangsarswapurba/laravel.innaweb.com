@@ -1,5 +1,6 @@
-@include('components/header')
+@extends('layouts.app')
 
+@section('main')
     @php $action_form = '/order/save/'; @endphp
     @if(isset($order) && $order)
         @foreach ($order as $pedido);
@@ -36,5 +37,4 @@
         <div class="col-sm-12 col-xs-12">Tidak ada produk</div>
     </form>
     @endif
-
-@include('components/footer')
+@endsection

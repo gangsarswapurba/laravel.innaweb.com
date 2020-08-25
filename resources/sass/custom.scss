@@ -3,7 +3,8 @@ html {
 }
 
 body {
-  background-color: lightgray;
+    background-color: rgb(222,226,230);
+    background-image: radial-gradient(circle, rgba(222,226,230,1) 0%, rgba(211,211,211,1) 100%);
 }
 
 .nav-item button {

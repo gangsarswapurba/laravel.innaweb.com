@@ -180,6 +180,19 @@ $(document).ready(function () {
 
 /***/ }),
 
+/***/ "./resources/js/stepper.js":
+/*!*********************************!*\
+  !*** ./resources/js/stepper.js ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+$(document).ready(function () {
+  $("input[type='number']").inputSpinner();
+});
+
+/***/ }),
+
 /***/ "./resources/sass/app.scss":
 /*!*********************************!*\
   !*** ./resources/sass/app.scss ***!
@@ -192,15 +205,16 @@ $(document).ready(function () {
 /***/ }),
 
 /***/ 0:
-/*!******************************************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/js/datatables.js ./resources/js/chart.js ./resources/sass/app.scss ***!
-  \******************************************************************************************************************/
+/*!********************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/js/datatables.js ./resources/js/chart.js ./resources/js/stepper.js ./resources/sass/app.scss ***!
+  \********************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! /Volumes/HDD/gangsar/laravel/resources/js/app.js */"./resources/js/app.js");
 __webpack_require__(/*! /Volumes/HDD/gangsar/laravel/resources/js/datatables.js */"./resources/js/datatables.js");
 __webpack_require__(/*! /Volumes/HDD/gangsar/laravel/resources/js/chart.js */"./resources/js/chart.js");
+__webpack_require__(/*! /Volumes/HDD/gangsar/laravel/resources/js/stepper.js */"./resources/js/stepper.js");
 module.exports = __webpack_require__(/*! /Volumes/HDD/gangsar/laravel/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
