@@ -21,23 +21,22 @@
         </tr>
         </thead>
         <tbody>
-        <?php
-        if($products) {
-            foreach ($products as $product) { ?>
+        @if($products)
+            @foreach ($products as $product)
                 <tr>
-                    <td><?= $product->id ?></td>
-                    <td><?= $product->nome ?></td>
-                    <td><?= $product->sku ?></td>
-                    <td><?= $product->preco ?></td>
+                    <td>{{ $product->id }}</td>
+                    <td>{{ $product->nome }}</td>
+                    <td>{{ $product->sku }}</td>
+                    <td>{{ $product->preco }}</td>
                     <td><a href="{{ url('product/ubah/'.$product->id) }}"><i class="fa fa-edit" aria-hidden="true"></i>
 </a></td>
-                    <td><a class="delete-product" href="#" data-id="<?= url('product/delete/'.$product->id) ?>" data-toggle="modal" data-target="#deleteProductModal"><i class="fa fa-trash" aria-hidden="true"></i>
+                    <td><a class="delete-product" href="#" data-id="{{ url('product/delete/'.$product->id) }}" data-toggle="modal" data-target="#deleteProductModal"><i class="fa fa-trash" aria-hidden="true"></i>
 </a></td>
                 </tr>
-            <?php }
-        } else { ?>
+            @endforeach
+        @else
             <td class="text-center" colspan="6">Tidak ada produk</td>
-        <?php } ?>
+        @endif
         </tbody>
     </table>
 @endsection

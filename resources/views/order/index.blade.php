@@ -19,9 +19,8 @@
         </tr>
         </thead>
         <tbody>
-        <?php
-        if($orders) {
-            foreach ($orders as $order) { ?>
+        @if($orders)
+            @foreach ($orders as $order)
                 <tr>
                     <td><?= $order->id ?></td>
                     <td><?php $data = new DateTime($order->data); echo $data->format('d/m/Y - H:i:s') ?></td>
@@ -29,10 +28,10 @@
                     <td><a class="delete-order" href="#" data-id="<?= url('order/delete/'.$order->id) ?>" data-toggle="modal" data-target="#deleteOrderModal"><i class="fa fa-trash" aria-hidden="true"></i>
 </a></td>
                 </tr>
-            <?php }
-        } else { ?>
+            @endforeach
+        @else
             <td class="text-center" colspan="6">Tidak ada penjualan</td>
-        <?php } ?>
+        @endif
         </tbody>
     </table>
 @endsection

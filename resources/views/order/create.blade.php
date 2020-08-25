@@ -30,7 +30,7 @@
         @endforeach
         <div class="mt-3">
             <button class="btn btn-primary" type="submit">Tambah</button>
-            <a href="{{ url('order') }}" class="btn btn-secondary">Batal</a>
+            <a href="{{ url()->previous() }}" class="btn btn-secondary">Batal</a>
         </div>
     @else
         <div class="col-sm-12 col-xs-12">Tidak ada produk</div>
