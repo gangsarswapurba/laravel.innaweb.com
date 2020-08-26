@@ -12,7 +12,7 @@ var days_in_month = new Date(
     0
 ).getDate();
 var days_label = new Array();
-for (var j = 0; j < days_in_month; j++) {
+for (var j = 0; j <= days_in_month; j++) {
     days_label.push(j);
 }
 
