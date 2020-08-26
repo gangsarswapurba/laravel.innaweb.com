@@ -18,7 +18,7 @@ body {
 .container-person {
   background-color: white;
   border-radius: 10px;
-  border: 1px solid darkgray;
+  border: none;
   padding: 5px 5px;
   margin-top: 5px;
   margin-bottom: 4rem;
@@ -36,6 +36,10 @@ body {
     color: white;
     font-weight: bold;
   }
+}
+
+.nav-item button {
+    font-weight: 700;
 }
 
 #dashboard_wrapper > .row {

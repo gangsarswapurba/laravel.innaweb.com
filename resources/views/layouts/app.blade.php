@@ -26,6 +26,8 @@
     <meta name="msapplication-TileImage" content="{{ url('img/favicon/ms-icon-144x144.png') }}">
     <meta name="theme-color" content="#ffffff">
 
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;600;700;900&display=swap" rel="stylesheet">
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <!-- datatable -->
