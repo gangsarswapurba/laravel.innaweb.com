@@ -44,6 +44,18 @@ body {
   }
 }
 
+.stepper + div button {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff; 
+}
+
+.stepper + div button:hover {
+    color: #fff;
+    background-color: #0069d9;
+    border-color: #0062cc;
+}
+
 .fa.fa-trash {
   color: red;
 }
