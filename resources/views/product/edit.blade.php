@@ -26,7 +26,7 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="inputGroupPrepend">Rp</span>
                     </div>
-                    <input type="number" class="form-control" id="preco" name="preco" placeholder="0" min="0" step="0.01" data-number-to-fixed="2" data-number-stepfactor="100" aria-describedby="inputGroupPrepend" required value="{{ (isset($product) ? $product->preco : '') }}">
+                    <input type="number" class="form-control" id="preco" name="preco" placeholder="0" aria-describedby="inputGroupPrepend" required value="{{ (isset($product) ? $product->preco : '') }}">
                 </div>
             </div>
         </div>
