@@ -4,7 +4,7 @@ function getRandomInt(max) {
     return Math.floor(Math.random() * Math.floor(max));
 }
 
-const amount_orders = new Array();
+var amount_orders = new Array();
 var to_date = new Date().getDate();
 var days_in_month = new Date(
     new Date().getYear(),
@@ -53,30 +53,19 @@ if (myChartElement !== null) {
     Axios.get('/api/sales/lastMonth')
         .then(function (response) {
             var sales = response.data;
-            // console.log(sales);
-            // console.log(sales[25]);
-
             for (var i = 1; i <= days_in_month; i++) {
                 if (sales[i]) {
                     amount_orders[i] = sales[i];
-                    // console.log(amount_orders[i]);
-
-                    myChart.update();
-
                 } else {
                     amount_orders[i] = 0;
                 }
-
             }
-
-            // console.log(amount_orders);
-
         })
         .catch(function (error) {
             console.log(error);
         })
         .then(function () {
-            // console.log('finally');
+            myChart.update();
         })
 
 }
