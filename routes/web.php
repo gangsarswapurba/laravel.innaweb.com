@@ -27,3 +27,5 @@ Route::get('/order/view/{id}', 'OrderController@view');
 Route::get('/order/create', 'OrderController@create');
 Route::post('/order/save', 'OrderController@save');
 Route::get('/order/delete/{id}', 'OrderController@delete');
+
+Route::get('/api/sales/lastMonth', 'SalesController@lastMonth');
