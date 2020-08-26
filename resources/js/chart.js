@@ -30,7 +30,7 @@ if (myChartElement !== null) {
             labels: days_label,
             datasets: [
                 {
-                    label: "per tanggal",
+                    label: "total item terjual",
                     data: amount_orders,
                     borderWidth: 1,
                     backgroundColor: "#71c7ec"
