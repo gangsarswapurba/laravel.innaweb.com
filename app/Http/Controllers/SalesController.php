@@ -23,7 +23,7 @@ class SalesController extends Controller
         $orders = [];
         foreach ($products as $key => $product){
             $date = new DateTime($product->tanggal);
-            $theDate = $date->format('d');
+            $theDate = intval($date->format('d'));
 
             if (isset($orders[$theDate])) {
                 $orders[$theDate] += $product->quantity;
