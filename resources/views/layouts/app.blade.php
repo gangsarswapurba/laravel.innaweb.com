@@ -41,7 +41,8 @@
     <!-- chartjs -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css" integrity="sha512-/zs32ZEJh+/EO2N1b0PEdoA10JkdC3zJ8L5FTiQu82LR9S/rOQNfQN7U59U9BC12swNeRAz3HSzIL2vpp4fv3w==" crossorigin="anonymous" />
 
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    @php $created_time = filemtime(public_path('css/app.css')) @endphp
+    <link href="{{ asset('css/app.css') . '?v=' . $created_time }}" rel="stylesheet">
 </head>
 
 <body>
