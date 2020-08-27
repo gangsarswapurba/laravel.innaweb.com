@@ -30,7 +30,7 @@
             </div>
         @endforeach
         <div class="mt-3">
-            <button class="btn btn-primary" type="submit">Tambah</button>
+            <button class="btn btn-primary" type="submit"><i class="fas fa-cart-plus"></i> Tambah</button>
             <a href="{{ url()->previous() }}" class="btn btn-primary">Batal</a>
         </div>
     @else
