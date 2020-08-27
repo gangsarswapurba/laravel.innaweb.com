@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,7 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'DashboardController@index');
+Auth::routes();
+
+Route::get('/dashboard', 'DashboardController@index');
 
 Route::get('/product', 'ProductController@index');
 Route::get('/product/ubah/{id}', 'ProductController@ubah');
@@ -29,6 +32,5 @@ Route::post('/order/save', 'OrderController@save');
 Route::get('/order/delete/{id}', 'OrderController@delete');
 
 Route::get('/api/sales/lastMonth', 'SalesController@lastMonth');
-Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index')->name('home');
