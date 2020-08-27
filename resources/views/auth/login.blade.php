@@ -1,4 +1,22 @@
-@extends('layouts.app')
+@extends('layouts.app') 
+
+@section('alert')
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            <div class="alert alert-info alert-dismissible fade show mt-3" role="alert">
+                <strong>username:</strong> demo@demo.com 
+                <br>
+                <strong>password:</strong> demo1234
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true"><i class="fas fa-sm fa-window-close"></i>
+                </span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection
 
 @section('content')
 <div class="container">

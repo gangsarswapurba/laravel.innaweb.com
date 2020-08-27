@@ -52,47 +52,49 @@
     </head>
     <body class="">
         <div id="app">
-        <header class="main-header">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
-                <a class="navbar-brand" href="{{ url('') }}/"><img src="{{ url('/img/algostudio.svg') }}"></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav ml-auto">
-                        @guest 
-                            <a class="nav-item nav-link {{ Route::currentRouteName() }}" href="{{ route('login') }}">
-                                <button type="button" class="btn btn-light btn-block">{{ __('Login') }}</button>
-                            </a>
-                            @if (Route::has('register'))
-                                <a class="nav-item nav-link {{ Route::currentRouteName() }}" href="{{ route('register') }}">
-                                    <button type="button" class="btn btn-light btn-block">{{ __('Register') }}</button>
+            <header class="main-header">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+                    <a class="navbar-brand" href="{{ url('') }}/"><img src="{{ url('/img/algostudio.svg') }}"></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav ml-auto">
+                            @guest 
+                                <a class="nav-item nav-link {{ Route::currentRouteName() }}" href="{{ route('login') }}">
+                                    <button type="button" class="btn btn-light btn-block">{{ __('Login') }}</button>
                                 </a>
-                            @endif
-                        @else
-                            <a class="nav-item nav-link {{ Route::currentRouteName() }}" href="{{ url('/') }}">
-                                <button type="button" class="btn btn-light btn-block">Dashboard</button>
-                            </a>
-                            <a class="nav-item nav-link {{ Route::currentRouteName() }}" href="{{ url('/product') }}">
-                                <button type="button" class="btn btn-light btn-block">Produk</button>
-                            </a>
-                            <a class="nav-item nav-link {{ Route::currentRouteName() }}" href="{{ url('/order') }}">
-                                <button type="button" class="btn btn-light btn-block">Penjualan</button>
-                            </a>
-                            <a class="nav-item nav-link {{ Route::currentRouteName() }}" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                        document.getElementById('logout-form').submit();">
-                                <button type="button" class="btn btn-light btn-block">Logout</button>
-                            </a>
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                            @csrf
-                                        </form>
-                        @endguest
+                                @if (Route::has('register'))
+                                    <a class="nav-item nav-link {{ Route::currentRouteName() }}" href="{{ route('register') }}">
+                                        <button type="button" class="btn btn-light btn-block">{{ __('Register') }}</button>
+                                    </a>
+                                @endif
+                            @else
+                                <a class="nav-item nav-link {{ Route::currentRouteName() }}" href="{{ url('/') }}">
+                                    <button type="button" class="btn btn-light btn-block">Dashboard</button>
+                                </a>
+                                <a class="nav-item nav-link {{ Route::currentRouteName() }}" href="{{ url('/product') }}">
+                                    <button type="button" class="btn btn-light btn-block">Produk</button>
+                                </a>
+                                <a class="nav-item nav-link {{ Route::currentRouteName() }}" href="{{ url('/order') }}">
+                                    <button type="button" class="btn btn-light btn-block">Penjualan</button>
+                                </a>
+                                <a class="nav-item nav-link {{ Route::currentRouteName() }}" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                            document.getElementById('logout-form').submit();">
+                                    <button type="button" class="btn btn-light btn-block">Logout</button>
+                                </a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                                @csrf
+                                            </form>
+                            @endguest
+                        </div>
                     </div>
-                </div>
-            </nav>
-        </header>
+                </nav>
+            </header>
 
-            <main class="ccontainer container-person {{ request()->is('login') || request()->is('register') ? 'my-5 mx-1 m-md-5 py-3 py-sm-5 px-0' : 'p-3 p-sm-3 p-md-5 p-lg-5 m-2 m-sm-3 m-md-5 l-lg-5 shadow' }}">
+            @yield('alert')
+
+            <main class="container container-person {{ request()->is('login') || request()->is('register') ? 'my-5 mx-1 m-md-5 py-3 py-sm-5 px-0' : 'p-3 p-sm-3 p-md-5 p-lg-5 m-2 m-sm-3 m-md-5 l-lg-5 shadow' }}">
                 @yield('content')
             </main>
 
