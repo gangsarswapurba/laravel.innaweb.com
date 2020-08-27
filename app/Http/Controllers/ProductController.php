@@ -47,6 +47,12 @@ class ProductController extends BaseController
         $id = is_null( $id ) ? null : $id;
 
         $input = $request->input();
+
+        // $validatedData = $request->validate([
+        //     'nome' => 'required|unique:product',
+        //     'sku' => 'required', 
+        //     'preco' => 'required'
+        // ]);
         
         $product = DB::table('product')
         ->updateOrInsert(

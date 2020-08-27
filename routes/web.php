@@ -29,3 +29,6 @@ Route::post('/order/save', 'OrderController@save');
 Route::get('/order/delete/{id}', 'OrderController@delete');
 
 Route::get('/api/sales/lastMonth', 'SalesController@lastMonth');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
