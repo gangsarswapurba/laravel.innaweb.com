@@ -55,13 +55,13 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ml-auto">
                     <a class="nav-item nav-link {{ Route::currentRouteName() }}" href="{{ url('/') }}">
-                    <button type="button" class="btn btn-light">Dashboard</button>
+                    <button type="button" class="btn btn-light btn-block">Dashboard</button>
                     </a>
                     <a class="nav-item nav-link {{ Route::currentRouteName() }}" href="{{ url('/product') }}">
-                    <button type="button" class="btn btn-light">Produk</button>
+                    <button type="button" class="btn btn-light btn-block">Produk</button>
                     </a>
                     <a class="nav-item nav-link {{ Route::currentRouteName() }}" href="{{ url('/order') }}">
-                    <button type="button" class="btn btn-light">Penjualan</button>
+                    <button type="button" class="btn btn-light btn-block">Penjualan</button>
                     </a>
                 </div>
             </div>
