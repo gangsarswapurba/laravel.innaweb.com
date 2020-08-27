@@ -1,10 +1,11 @@
-html {
+:root, body {
   font-family: 'Inter', sans-serif;
 }
 
 body {
     background-color: rgb(222,226,230);
     background-image: radial-gradient(circle, rgba(222,226,230,1) 0%, rgba(211,211,211,1) 100%);
+    font-weight: 600;
 }
 
 .nav-item button {
@@ -21,9 +22,6 @@ body {
   background-color: white;
   border-radius: 10px;
   border: none;
-  padding: 5px 5px;
-  margin-top: 5px;
-  margin-bottom: 4rem;
 }
 
 .bg-dark {
@@ -47,15 +45,15 @@ body {
 }
 
 .stepper + div button {
-    color: #fff;
-    background-color: #007bff;
-    border-color: #007bff; 
+    color: white;
+    background-color: $primary;
+    border-color: $primary; 
 }
 
 .stepper + div button:hover {
-    color: #fff;
-    background-color: #0069d9;
-    border-color: #0062cc;
+    color: white;
+    background-color: darken($primary, 7.5%);
+    border-color: darken($primary, 10%);
 }
 
 .fa.fa-trash {

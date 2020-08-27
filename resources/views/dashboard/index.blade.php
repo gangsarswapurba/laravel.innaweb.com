@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('main')
+@section('content')
 <h2>Penjualan Bulan {{ date('F') }} Ini</h2>
 <canvas id="myChart" width="" height=""></canvas>
 

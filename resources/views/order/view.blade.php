@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('main')
+@section('content')
     <h1>Order #{{$order_id}}</h1>
     
     <table id="order_table" class="table table-striped table-bordered table-responsive-sm" style="width:100%">

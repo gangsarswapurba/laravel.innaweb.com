@@ -11,9 +11,14 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
-class ProductController extends BaseController
+class ProductController extends Controller
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+
+    public function __construct()
+    {
+        parent::__construct();
+    }
 
     function index() {
         $products = DB::table('product')->get();
@@ -69,7 +74,8 @@ class ProductController extends BaseController
             ]
         );
 
-        return is_null( $id ) ? redirect('product') : back();
+        // return is_null( $id ) ? redirect('product') : back();
+        return redirect('product');
     }
 
     function delete($id) {

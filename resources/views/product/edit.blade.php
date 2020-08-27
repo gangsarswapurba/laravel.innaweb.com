@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('main')
+@section('content')
     @php $action_form = '/product/save/' @endphp
     @if(isset($product) && $product)
         @php $product = $product[0] @endphp
@@ -26,7 +26,7 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="inputGroupPrepend">Rp</span>
                     </div>
-                    <input type="number" class="form-control" id="preco" name="preco" placeholder="0" aria-describedby="inputGroupPrepend" required value="{{ (isset($product) ? $product->preco : '') }}">
+                    <input type="number" min="1" step="any" class="form-control" id="preco" name="preco" placeholder="0" aria-describedby="inputGroupPrepend" required value="{{ (isset($product) ? $product->preco : '') }}">
                 </div>
             </div>
         </div>

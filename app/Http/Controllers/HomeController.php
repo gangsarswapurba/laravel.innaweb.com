@@ -3,17 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
+   
     public function __construct()
     {
-        $this->middleware('auth');
+        parent::__construct();
     }
 
     /**
@@ -23,6 +20,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $orders = DB::table('order')
+        ->where('status', '=', 1)
+        ->orderBy('id', 'desc')
+        ->limit(10)
+        ->get();
+
+        return view('dashboard.index', ['orders' => $orders]);
     }
 }

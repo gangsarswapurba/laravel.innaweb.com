@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('main')
+@section('content')
     <div class="row mb-3">
       <div class="col-md-6">
         <h1>Daftar Penjualan</h1>

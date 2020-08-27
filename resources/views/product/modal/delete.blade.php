@@ -11,7 +11,7 @@
               Data transaksi penjualan yang sudah dihapus tidak dapat direstore!
           </div>
           <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Batal</button>
               <a href="#" class="btn btn-danger" name="confirmDeleteProduct" id="confirmDeleteProduct"><i style="color: white;" class="fa fa-trash" aria-hidden="true"></i> Hapus</a>
           </div>
       </div>
