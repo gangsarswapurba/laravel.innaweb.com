@@ -16,8 +16,6 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/dashboard', 'DashboardController@index');
-
 Route::get('/product', 'ProductController@index');
 Route::get('/product/ubah/{id}', 'ProductController@ubah');
 Route::get('/product/create', 'ProductController@create');
@@ -33,4 +31,5 @@ Route::get('/order/delete/{id}', 'OrderController@delete');
 
 Route::get('/api/sales/lastMonth', 'SalesController@lastMonth');
 
-Route::get('/', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index');
+Route::get('/home', 'HomeController@index');
