@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="container">
     @php $action_form = '/order/save/'; @endphp
     @if(isset($order) && $order)
         @php $order = $order[0] @endphp
@@ -37,4 +38,5 @@
         <div class="col-sm-12 col-xs-12">Tidak ada produk</div>
     </form>
     @endif
+</div>
 @endsection

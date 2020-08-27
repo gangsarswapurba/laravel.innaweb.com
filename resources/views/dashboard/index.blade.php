@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="container">
 <h2>Penjualan Bulan {{ date('F') }} Ini</h2>
 <canvas id="myChart" width="" height=""></canvas>
 
@@ -30,6 +31,7 @@
         @endif
         </tbody>
     </table>
+</div>
 @endsection
 
 @section('modal')

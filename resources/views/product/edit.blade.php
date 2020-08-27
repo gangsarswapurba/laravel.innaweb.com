@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="container">
     @php $action_form = '/product/save/' @endphp
     @if(isset($product) && $product)
         @php $product = $product[0] @endphp
@@ -39,6 +40,7 @@
         <button class="btn btn-primary" type="submit">Submit</button>
         <a href="{{ url('product') }}" class="btn btn-secondary">Back</a>
     </form>
+</div>
 @endsection
 
 

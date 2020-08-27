@@ -51,64 +51,62 @@
         <link href="{{ asset('css/app.css') . '?v=' . $css_created_time }}" rel="stylesheet">
     </head>
     <body class="">
-        <div id="app">
-            <header class="main-header">
-                <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
-                    <a class="navbar-brand" href="{{ url('') }}/"><img src="{{ url('/img/algostudio.svg') }}"></a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                        <div class="navbar-nav ml-auto">
-                            @guest 
-                                <a class="nav-item nav-link {{ Route::currentRouteName() }}" href="{{ route('login') }}">
-                                    <button type="button" class="btn btn-light btn-block">{{ __('Login') }}</button>
+        <header class="main-header">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+                <a class="navbar-brand" href="{{ url('') }}/"><img src="{{ url('/img/algostudio.svg') }}"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav ml-auto">
+                        @guest 
+                            <a class="nav-item nav-link {{ Route::currentRouteName() }}" href="{{ route('login') }}">
+                                <button type="button" class="btn btn-light btn-block">{{ __('Login') }}</button>
+                            </a>
+                            @if (Route::has('register'))
+                                <a class="nav-item nav-link {{ Route::currentRouteName() }}" href="{{ route('register') }}">
+                                    <button type="button" class="btn btn-light btn-block">{{ __('Register') }}</button>
                                 </a>
-                                @if (Route::has('register'))
-                                    <a class="nav-item nav-link {{ Route::currentRouteName() }}" href="{{ route('register') }}">
-                                        <button type="button" class="btn btn-light btn-block">{{ __('Register') }}</button>
-                                    </a>
-                                @endif
-                            @else
-                                <a class="nav-item nav-link {{ Route::currentRouteName() }}" href="{{ url('/') }}">
-                                    <button type="button" class="btn btn-light btn-block">Dashboard</button>
-                                </a>
-                                <a class="nav-item nav-link {{ Route::currentRouteName() }}" href="{{ url('/product') }}">
-                                    <button type="button" class="btn btn-light btn-block">Produk</button>
-                                </a>
-                                <a class="nav-item nav-link {{ Route::currentRouteName() }}" href="{{ url('/order') }}">
-                                    <button type="button" class="btn btn-light btn-block">Penjualan</button>
-                                </a>
-                                <a class="nav-item nav-link {{ Route::currentRouteName() }}" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                            document.getElementById('logout-form').submit();">
-                                    <button type="button" class="btn btn-light btn-block">Logout</button>
-                                </a>
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                                @csrf
-                                            </form>
-                            @endguest
-                        </div>
+                            @endif
+                        @else
+                            <a class="nav-item nav-link {{ Route::currentRouteName() }}" href="{{ url('/') }}">
+                                <button type="button" class="btn btn-light btn-block">Dashboard</button>
+                            </a>
+                            <a class="nav-item nav-link {{ Route::currentRouteName() }}" href="{{ url('/product') }}">
+                                <button type="button" class="btn btn-light btn-block">Produk</button>
+                            </a>
+                            <a class="nav-item nav-link {{ Route::currentRouteName() }}" href="{{ url('/order') }}">
+                                <button type="button" class="btn btn-light btn-block">Penjualan</button>
+                            </a>
+                            <a class="nav-item nav-link {{ Route::currentRouteName() }}" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                        document.getElementById('logout-form').submit();">
+                                <button type="button" class="btn btn-light btn-block">Logout</button>
+                            </a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                            @csrf
+                                        </form>
+                        @endguest
                     </div>
-                </nav>
-            </header>
-
-            @yield('alert')
-
-            <main class="container container-person {{ request()->is('login') || request()->is('register') ? 'my-5 mx-1 m-md-5 py-3 py-sm-5 px-0' : 'p-3 p-sm-3 p-md-5 p-lg-5 m-2 m-sm-3 m-md-5 l-lg-5 shadow' }}">
-                @yield('content')
-            </main>
-
-            @yield('modal')
-
-            <footer class="page-footer font-small">
-                <div class="footer-copyright text-center py-3">
-                    <p class="font-weight-light mb-0">
-                        <span>feel free to fork this project at my </span> <a href="https://github.com/gangsarswapurba/laravel.innaweb.com"><i class="fab fa-github"></i> GitHub</a>
-                    </p>
                 </div>
-            </footer>
+            </nav>
+        </header>
 
-        </div>
+        @yield('alert')
+
+        <main class="main-container {{ request()->is('login') || request()->is('register') ? 'my-5 mx-3 mx-sm-5 py-3 py-sm-5 px-0' : 'p-3 p-sm-3 p-md-5 p-lg-5 mx-2 my-3 m-sm-3 m-md-5 l-lg-5 shadow' }}">
+            @yield('content')
+        </main>
+
+        @yield('modal')
+
+        <footer class="page-footer font-small">
+            <div class="footer-copyright text-center py-3">
+                <p class="font-weight-light mb-0">
+                    <span>feel free to fork this project at my </span> <a href="https://github.com/gangsarswapurba/laravel.innaweb.com"><i class="fab fa-github"></i> GitHub</a>
+                </p>
+            </div>
+        </footer>
+
         <!-- pace js -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js" integrity="sha512-ePSfiGQMIzYzXVQLqWoVC3yxVEHIM5Y3EGh9jPNxpf+hPuLtzPdxJX+lTC3ziPMlDgc5OsM4JThxGwN2DkWEeA==" crossorigin="anonymous"></script>
         <!-- app js -->
@@ -135,6 +133,5 @@
         <!-- instant.page -->
         <script src="https://instant.page/5.1.0" type="module" integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
 
-    
     </body>
 </html>

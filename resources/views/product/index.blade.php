@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="container">
     <div class="row mb-3">
       <div class="col-md-6">
         <h1>Daftar Produk</h1>
@@ -39,6 +40,7 @@
         @endif
         </tbody>
     </table>
+</div>
 @endsection
 
 @section('modal')
