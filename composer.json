@@ -26,7 +26,7 @@
         "optimize-autoloader": true,
         "preferred-install": "dist",
         "sort-packages": true,
-        "cache-dir": "/home/u4354245/public_html/laravel.innaweb.com/cache"
+        "cache-dir": "cache"
     },
     "extra": {
         "laravel": {
