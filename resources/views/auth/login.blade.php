@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-sm">
-            <div class="alert alert-info alert-dismissible fade show mt-3" role="alert">
+            <div class="alert alert-info alert-dismissible fade show mt-3 py-3" role="alert">
                 <strong>username:</strong> demo@demo.com 
                 <br>
                 <strong>password:</strong> demo1234
