@@ -1,20 +1,26 @@
-:root, body {
-  font-family: 'Inter', sans-serif;
+:root,
+body {
+  font-family: "Inter", sans-serif;
 }
 
 body {
-    background-color: rgb(222,226,230);
-    background-image: radial-gradient(circle, rgba(222,226,230,1) 0%, rgba(211,211,211,1) 100%);
-    font-weight: 600;
+  background-color: rgb(222, 226, 230);
+  background-image: radial-gradient(
+    circle,
+    rgba(222, 226, 230, 1) 0%,
+    rgba(211, 211, 211, 1) 100%
+  );
+  font-weight: 600;
 }
 
 .nav-item button {
-    font-weight: 900;
-    padding-right: 1rem;
-    padding-left: 1rem;
+  font-weight: 900;
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
 
-.h1, h1 {
+.h1,
+h1 {
   font-weight: 600;
 }
 
@@ -32,28 +38,30 @@ body {
   color: white;
   font-weight: bold;
 
-  &:focus, &:hover {
+  &:focus,
+  &:hover {
     color: white;
     font-weight: bold;
   }
 }
 
 #dashboard_wrapper > .row {
-  &:first-child, &:last-child {
+  &:first-child,
+  &:last-child {
     display: none;
   }
 }
 
 .stepper + div button {
-    color: white;
-    background-color: $primary;
-    border-color: $primary; 
+  color: white;
+  background-color: $primary;
+  border-color: $primary;
 }
 
 .stepper + div button:hover {
-    color: white;
-    background-color: darken($primary, 7.5%);
-    border-color: darken($primary, 10%);
+  color: white;
+  background-color: darken($primary, 7.5%);
+  border-color: darken($primary, 10%);
 }
 
 .fa.fa-trash {
@@ -72,6 +80,10 @@ footer {
       background-color: black;
       color: white;
     }
+  }
+
+  i {
+    margin-left: 2px;
   }
 
   span {
