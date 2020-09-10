@@ -11,7 +11,7 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title>{{ config('app.name', 'Laravel') }}</title>
-        
+
         <link rel="apple-touch-icon" sizes="57x57" href="{{ url('img/favicon/apple-icon-57x57.png') }}">
         <link rel="apple-touch-icon" sizes="60x60" href="{{ url('img/favicon/apple-icon-60x60.png') }}">
         <link rel="apple-touch-icon" sizes="72x72" href="{{ url('img/favicon/apple-icon-72x72.png') }}">
@@ -45,7 +45,7 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-bs4.css" rel="stylesheet">
         <!-- chartjs -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css" integrity="sha512-/zs32ZEJh+/EO2N1b0PEdoA10JkdC3zJ8L5FTiQu82LR9S/rOQNfQN7U59U9BC12swNeRAz3HSzIL2vpp4fv3w==" crossorigin="anonymous" />
-        
+
         <!-- app css -->
         @php $css_created_time = filemtime(public_path('css/app.css')) @endphp
         <link href="{{ asset('css/app.css') . '?v=' . $css_created_time }}" rel="stylesheet">
@@ -59,7 +59,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav ml-auto">
-                        @guest 
+                        @guest
                             <a class="nav-item nav-link {{ Route::currentRouteName() }}" href="{{ route('login') }}">
                                 <button type="button" class="btn btn-light btn-block">{{ __('Login') }}</button>
                             </a>
@@ -102,7 +102,7 @@
         <footer class="page-footer font-small">
             <div class="footer-copyright text-center py-3">
                 <p class="font-weight-light mb-0">
-                    <span>feel free to fork this project at my </span> <a href="https://github.com/gangsarswapurba/laravel.innaweb.com"><i class="fab fa-github"></i> GitHub</a>
+                    <span>show me your love by starring at </span> <a href="https://github.com/gangsarswapurba/laravel.innaweb.com"><i class="fab fa-github"></i> GitHub</a>
                 </p>
             </div>
         </footer>
