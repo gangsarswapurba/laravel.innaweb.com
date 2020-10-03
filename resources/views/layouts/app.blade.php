@@ -102,7 +102,7 @@
         <footer class="page-footer font-small">
             <div class="footer-copyright text-center py-3">
                 <p class="font-weight-light mb-0">
-                    <span>show me your love by starring me at </span> <a href="https://github.com/gangsarswapurba/laravel.innaweb.com"><i class="fab fa-github"></i> GitHub</a>
+                    <span>show me your love by starring me at </span> <a href="https://github.com/jamaluddinrumi/laravel.innaweb.com"><i class="fab fa-github"></i> GitHub</a>
                 </p>
             </div>
         </footer>
